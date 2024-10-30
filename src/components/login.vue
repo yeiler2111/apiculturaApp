@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, onMounted, reactive } from 'vue';
-import login from '@/components/login.vue';
+import { reactive } from 'vue';
 
 import { User } from './type';
 const form = reactive<User>({
@@ -12,11 +11,11 @@ const form = reactive<User>({
 
 <template>
   <div class="container">
-    <el-row class="sub-container" :gutter="12">
-      <el-col class="image-container" :span="12">
+    <el-row justify="center" class="sub-container" :gutter="12">
+      <el-col class="image-container showImage" :span="12">
         <div class="image"></div>
       </el-col>
-      <el-col :span="12" >
+      <el-col class="center-content" :span="12" >
         <div class="title">
         <h3>Bienvenido!</h3>
         </div>
@@ -70,6 +69,9 @@ const form = reactive<User>({
   
 
 }
+.center-content{
+  margin: auto auto;
+}
 .size-input{
   height: 3rem;
 }
@@ -95,6 +97,7 @@ const form = reactive<User>({
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0px 0px 40px 0px #c4c4c46e;
+  
 }
 
 .sub-container{
@@ -107,6 +110,12 @@ const form = reactive<User>({
   font-size: small;
   text-decoration: none;
   color: gray;
+}
+
+@media(max-width: 680px){
+  .showImage{
+    display: none;
+  }
 }
 
 </style>

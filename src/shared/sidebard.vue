@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import sidebardVue from "@/shared/sidebard.vue";
 </script>
 <template>
-    <div class="content">
-        <el-row>
-            <el-col :span="4">
-                <sidebardVue/>
-            </el-col>
-            <el-col :span="20">
-                administrator dashboard
-            </el-col>
-        </el-row>
+    <div class="container h-screen w-16 md:w-20 lg:w-20 xl:w-20 text-center pt-14">
+        <div class="opciones">
+            <div class="opCirculo">
+                <a href=""><img src={reservaIcon.src} alt="Reserva" width="30"></a>
+            </div>
+            <div class="opCirculo">
+                <a href=""><img src={historialIcon.src} alt="Historial" width="30"></a>
+            </div>
+        </div>
+        <div class="opcionCuenta">
+            <div class="opCirculo">
+                <a href=""><img src={usuarioIcon.src} alt="Usuario" width="30"></a>
+            </div>
+        </div>
     </div>
 </template>
 
-
 <style scoped>
-.content{
-    height: 100%;
-    width: 100%;
-}
+
 .container {
     position: fixed;
     top: 0;
@@ -59,5 +59,7 @@ import sidebardVue from "@/shared/sidebard.vue";
 .container img {
     filter: invert(1) brightness(2);
 }
+
+
 
 </style>
