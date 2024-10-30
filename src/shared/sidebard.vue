@@ -24,7 +24,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, #004a87 50% ,  #5381ff);
+    background: linear-gradient(to bottom, #FDBC29 50% ,  #FDBC29);
     display: flex;
     flex-direction: column;
     align-items: center;

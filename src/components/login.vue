@@ -41,7 +41,8 @@ const form = reactive<User>({
           </el-form-item>
           </el-row>
           <el-row justify="center" style="">
-              <button class="button">Ingresar</button>
+              <!-- <button @click="this.$router({name:'dashboardAdmin'})" class="button">Ingresar</button> -->
+              <el-button class="button" type="warning">Ingresar</el-button>
           </el-row>
           <el-row justify="center">
             <a class="link" href="">¿Olvidaste tu contraseña?</a>
@@ -59,7 +60,7 @@ const form = reactive<User>({
 .button{
   width: 80%;
   color: #fff;
-  background: linear-gradient(to right, #fff, #FDBC29);
+  /* background: linear-gradient(to right, #fff, #FDBC29); */
   background-size: 500% 400%;
   background-position: 50% 80%;
   border-radius:.4rem;

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import sidebardVue from "@/shared/sidebard.vue";
+import sidebard from "@/shared/sidebard.vue";
 </script>
 <template>
     <div class="content">
         <el-row>
             <el-col :span="4">
-                <sidebardVue/>
+                <sidebard/>
             </el-col>
             <el-col :span="20">
                 administrator dashboard
@@ -16,48 +16,6 @@ import sidebardVue from "@/shared/sidebard.vue";
 
 
 <style scoped>
-.content{
-    height: 100%;
-    width: 100%;
-}
-.container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, #004a87 50% ,  #5381ff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-}
 
-.opciones{
-    display: flex;
-    flex-direction: column; 
-    gap: 3rem;
-}
-
-.opcionCuenta{
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5em;
-}
-
-.opCirculo{
-    box-shadow: 2px 2px 2px 2px #00103d9f;
-    border-radius: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3.2em;
-    height: 3.2em;
-    cursor: pointer;
-}
-
-.container img {
-    filter: invert(1) brightness(2);
-}
 
 </style>
