@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { defineProps, onMounted, reactive } from 'vue';
 import login from '@/components/login.vue';
+
 import { User } from './type';
 const form = reactive<User>({
   userName:'',
@@ -13,31 +14,40 @@ const form = reactive<User>({
   <div class="container">
     <el-row class="sub-container" :gutter="12">
       <el-col class="image-container" :span="12">
-         <div class="image"></div>
+        <div class="image"></div>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" >
         <div class="title">
         <h3>Bienvenido!</h3>
-      </div>
-      <el-form v-model="form">
-        <el-form-item >
-          <span>Usuario</span>
-          <el-input 
-          v-model="form.name" placeholder="digite el usuario"/>
-        </el-form-item>
-        <el-form-item>
-          <span>Password</span>
-          <el-input v-model="form.password" placeholder="digite la contraseña"/>
-        </el-form-item>
-        <el-row justify="start">
-          <a class="link" href="">recuperar contraseña</a>
-        </el-row>
-        <el-row>
-          <el-col :span="24">
-            <el-button type="warning">Ingresar</el-button>
-          </el-col>
-        </el-row>
-      </el-form>
+        </div>
+        <el-form v-model="form">
+          <el-row justify="center">
+            <el-form-item class="input" >
+            <el-input
+            v-model="form.name" placeholder="@Usuario" class="size-input" >
+              <template #prefix>
+                <el-icon>
+                  <UserFilled/>
+                </el-icon>
+              </template>
+            </el-input>
+          </el-form-item>
+          <el-form-item class="input">
+            <el-input class="size-input"  v-model="form.password" placeholder="Contraseña">
+              <template #prefix>
+                <el-icon><Unlock />
+              </el-icon>
+              </template>
+            </el-input>
+          </el-form-item>
+          </el-row>
+          <el-row justify="center" style="">
+              <button class="button">Ingresar</button>
+          </el-row>
+          <el-row justify="center">
+            <a class="link" href="">¿Olvidaste tu contraseña?</a>
+          </el-row>
+        </el-form>
       </el-col>
     </el-row>
     </div>
@@ -46,12 +56,31 @@ const form = reactive<User>({
 
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped lang="css">
+.button{
+  width: 80%;
+  color: #fff;
+  background: linear-gradient(to right, #fff, #FDBC29);
+  background-size: 500% 400%;
+  background-position: 50% 80%;
+  border-radius:.4rem;
+  border: none;
+  padding: 10px 20px;
+  height: 3rem;
+  
+
+}
+.size-input{
+  height: 3rem;
+}
+.input{
+  width: 80%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
 .image{
-  background-image: url('../assets/apiculturaBG.jpg'); /* Ruta de tu imagen */
-  width: 100%; /* Ocupa el 100% del ancho del contenedor */
-  height: 100%; /* Ocupa el 100% del alto del contenedor */
+  background-image: url('../assets/apiculturaBG.jpg'); 
+  width: 100%;
+  height: 100%;
   background-size: cover; /* Cubre todo el contenedor */
   background-position: center; /* Centra la imagen en el contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -76,6 +105,8 @@ const form = reactive<User>({
 }
 .link{
   font-size: small;
+  text-decoration: none;
+  color: gray;
 }
 
 </style>
