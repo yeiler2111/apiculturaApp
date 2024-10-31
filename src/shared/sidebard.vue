@@ -35,20 +35,17 @@
         justify-content: space-between;
         padding-bottom: 2rem;
     }
-
     .opciones{
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 3rem;
     }
-
     .opcionCuenta{
         grid-row: 1;
         display: flex;
         flex-direction: column;
         gap: 5em;
     }
-
     .opCirculo{
         box-shadow: 2px 2px 2px 2px #00103d9f;
         border-radius: 200px;
@@ -59,8 +56,22 @@
         height: 3.2em;
         cursor: pointer;
     }
-
     .container img {
         filter: invert(1) brightness(2);
+    }
+    @media(max-width: 790px){
+        .opCirculo{
+            width: 2.5em;
+            height: 2.5em;
+        }
+    }
+    @media(max-width: 610px){
+        .opCirculo{
+            width: 1.8em;
+            height: 1.8em;
+        }
+        .color-icon{
+            font-size: 1px;
+        }
     }
 </style>
